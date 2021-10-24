@@ -1,0 +1,21 @@
+---
+title: 'Peer-graded Assignment: R Markdown and Leaflet'
+author: "Kim Rosmus"
+date: "February 11, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+m_map <- leaflet() %>% addTiles()   
+m_map <- m_map %>% addMarkers(lat= 40.4395932, lng= -79.9893378, popup="Piitsburgh Penguins play here")
+m_map  
+```
